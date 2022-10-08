@@ -26,7 +26,7 @@ const Questionapp = () => {
 
     }
     const fetchQuestions = async () => {
-        let baseUrl = "http://localhost:5001";
+        let baseUrl = "https://adorable-teal-pocket.cyclic.app";
         try {
             const response = await axios.get(`${baseUrl}/home`);
             console.log("response", response)
