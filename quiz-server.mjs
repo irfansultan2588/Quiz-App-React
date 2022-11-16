@@ -5,7 +5,10 @@ import mongoose from 'mongoose';
 const app = express();
 app.use(express.json());
 
-app.use(cors())
+app.use(cors({
+    origin: ['http://localhost:3000', 'https://react-quiz-app2588.netlify.app', '*'],
+    credentials: true
+}));
 
 const port = process.env.PORT || 5001;
 

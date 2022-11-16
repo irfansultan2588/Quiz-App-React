@@ -5,6 +5,7 @@ import axios from 'axios';
 const Questionapp = () => {
 
     const [currentQuestion, setcurrentQuestion] = useState(0);
+    console.log("🚀 ~ currentQuestion", currentQuestion)
     const [score, setScore] = useState(0);
     const [showScore, setshowScore] = useState(false);
     const [questions, setQuestions] = useState([])
@@ -27,6 +28,7 @@ const Questionapp = () => {
     }
     const fetchQuestions = async () => {
         let baseUrl = "https://adorable-teal-pocket.cyclic.app";
+
         try {
             const response = await axios.get(`${baseUrl}/home`);
             console.log("response", response)
